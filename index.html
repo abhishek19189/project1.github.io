@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: rgb(67, 177, 245);
+            min-height: 100vh;
+            color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .login-container h2 {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 2px solid #bdc3c7;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 0.5rem;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .login-container button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form submission
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            console.log('Username:', username); // Debugging log
+            console.log('Password:', password); // Debugging log
+
+            // Simple authentication check
+            if (username === 'charu' && password === '24062004') {
+console.log('Login successful'); // Debugging log
+console.log('Redirecting to gojo_no_login.html'); // Debugging log
+                // Redirect to gojo_no_login.html on successful login
+                window.location.href = 'gojo.html';
+            } else {
+                console.log('Invalid credentials'); // Debugging log
+                alert('Invalid username or password');
+            }
+        });
+    </script>
+</body>
+</html>
+</create_file>
